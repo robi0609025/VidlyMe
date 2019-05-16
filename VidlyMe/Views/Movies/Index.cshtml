@@ -1,0 +1,37 @@
+﻿@model IEnumerable<VidlyMe.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+@{
+    if (!Model.Any())
+    {
+        <p>We don't have any movie in our list.</p>
+    }
+
+    else
+    {
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>
+                    Movies
+                </th>
+            </tr>
+            @foreach (var Movie in Model) 
+            {
+                <tr>
+                    <td>
+                        @Movie.Name
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+}
+
+
