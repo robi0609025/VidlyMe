@@ -1,0 +1,12 @@
+﻿
+
+Enable-migrations
+
+Add-migration InitialModel
+
+--> Add DbSet in the IdentityModel.cs
+
+Add-migration InitialModel -force
+
+Update-database
+
