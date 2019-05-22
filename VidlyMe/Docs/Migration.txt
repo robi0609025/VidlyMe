@@ -10,3 +10,11 @@ Add-migration InitialModel -force
 
 Update-database
 
+
+
+
+//Add a new property in customer model
+
+Add-migration AddIsSubscribedToNewsLetter
+
+Update-database

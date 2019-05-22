@@ -122,3 +122,7 @@ C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.dll
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.pdb
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.InitialModel.resources
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.csproj.GenerateResource.cache
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddIsSubscribedToCustomer.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddMembershipType.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.PopulateMembershipType.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.ApplyAnnotationsToCustomerName.resources
