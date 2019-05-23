@@ -126,3 +126,10 @@ C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddIsSub
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddMembershipType.resources
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.PopulateMembershipType.resources
 C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.ApplyAnnotationsToCustomerName.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddNameInMembershipType.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.UpdateNameInMembershipType.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddBirthdayInCustomer.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.UpdateBirthday.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.AddGenreAndMovieProperty.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.PopulateGenre.resources
+C:\Users\Robi\source\repos\VidlyMe\VidlyMe\obj\Debug\VidlyMe.Migrations.PopulateGenre1.resources

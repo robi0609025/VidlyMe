@@ -19,12 +19,19 @@
                 <th>
                     Movies
                 </th>
+                <th>
+                    Genre
+                </th>
             </tr>
             @foreach (var Movie in Model) 
             {
                 <tr>
                     <td>
-                        @Movie.Name
+                        @Html.ActionLink(@Movie.Name, "Details", "Movies", new { id = Movie.Id}, null)
+                        @*@Movie.Name*@
+                    </td>
+                    <td>
+                        @Movie.Genre.GenreName
                     </td>
                 </tr>
             }

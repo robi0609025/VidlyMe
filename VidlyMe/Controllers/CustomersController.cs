@@ -22,6 +22,7 @@ namespace VidlyMe.Controllers
         }
         //end - context class is used for accessing database. It needs to be disposed.
 
+        
         public ActionResult Index()
         {
             //var Customers = GetCustomer();
@@ -30,9 +31,10 @@ namespace VidlyMe.Controllers
             return View(Customers);
         }
 
+
         public ActionResult Details(int? id)
         {
-            var Customer = _context.Customers.SingleOrDefault(c => c.CustomerId == id);
+            var Customer = _context.Customers.Include(c => c.MembershipType).SingleOrDefault(c => c.CustomerId == id);
 
             if (Customer == null)
             {
@@ -41,18 +43,6 @@ namespace VidlyMe.Controllers
 
             return View(Customer);
         }
-
-
-        //Get Customer method to collect customer data
-        //private IEnumerable<Customer> GetCustomer()
-        //{
-        //    var Customers = new List<Customer>()
-        //    {
-        //        new Customer(){Name = "John Smith", CustomerId = 1 },
-        //        new Customer(){Name = "Mary William", CustomerId = 2 }
-        //    };
-        //    return Customers;
-        //}
 
     }
 }

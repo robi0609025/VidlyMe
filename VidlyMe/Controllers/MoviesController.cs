@@ -5,55 +5,40 @@ using System.Web;
 using System.Web.Mvc;
 using VidlyMe.Models;
 using VidlyMe.ViewModel;
+using System.Data.Entity;
 
 namespace VidlyMe.Controllers
 {
     public class MoviesController : Controller
     {
-
-        public ActionResult Index()
+        private ApplicationDbContext _context;
+        public MoviesController()
         {
-            var Movies = GetMovies();
-            return View(Movies);
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
         }
 
 
-        // GET: Movies
-        //public ActionResult Random()
-        //{
-        //    var Movie = new Movie() { Id = 1, Name = "Shrek" };
-            
 
-        //    RandomMovieViewModel ViewModel = new RandomMovieViewModel() { Customers = Customers, Movie = Movie };
-
-        //    return View(ViewModel);
-        //}
-
-
-
-        //[Route("movies/released/{year:range(1930,2019)}/{month:regex(\\d{2}):range(1,12)}")]
-        //public ActionResult ReleaseByDate(int year, int month)
-        //{
-
-
-        //    //return View();
-        //    //return Content("Worked");
-        //    return Content(String.Format("Year = {0} and Month = {1}", year, month));
-        //}
-
-
-
-
-
-        private IEnumerable<Movie> GetMovies()
+        public ActionResult Index()
         {
-            var Movies = new List<Movie>
-            {
-                new Movie(){ Name = "Shrek!", Id = 1},
-                new Movie(){ Name = "Tomorrow Never Dies", Id = 2}
-            };
+            //var Movies = GetMovies();
+            var Movies = _context.Movies.Include(c => c.Genre).ToList();
+            return View(Movies);
+        }
 
-            return Movies;
+        public ActionResult Details(int? id)
+        {
+            var Movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(m => m.Id == id);
+            if (Movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(Movie);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace VidlyMe.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Customer> Customers { get; set; }    //Customer dbset is added
+        public DbSet<Movie> Movies { get; set; }          //Movie dbset is added
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
